@@ -1,6 +1,11 @@
-import React from 'react';
-import ModuleLayout from '../../../../components/Courses/ModuleLayout';
-import ModuleContent from '../../../../components/Courses/ModuleContent';
+import styled from 'styled-components';
+import Breadcrumb from '../../../../components/Common/Breadcrumb';
+
+const ModuleContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+`;
 
 const Module1 = () => {
   const breadcrumbItems = [
@@ -10,9 +15,10 @@ const Module1 = () => {
   ];
 
   return (
-    <ModuleLayout breadcrumbItems={breadcrumbItems}>
-      <ModuleContent />
-    </ModuleLayout>
+    <ModuleContainer>
+      <Breadcrumb items={breadcrumbItems} />
+      {/* Module content */}
+    </ModuleContainer>
   );
 };
 
